@@ -1,5 +1,4 @@
 
-```
 # Proyecto Tienda
 
 Este proyecto tiene como objetivo crear una **página web de tienda básica** utilizando **HTML, CSS y JavaScript**, tomando como referencia un diseño visual alojado en Stitch de Google.
@@ -27,10 +26,14 @@ La estructura de carpetas será la siguiente:
 ├── data.js             # Archivo con los datos de los productos
 └── /imagenes           # Carpeta que contiene las imágenes de los productos
 
-````
+```
+
+---
 
 ## Recursos
 
 * [MDN Web Docs - HTML](https://developer.mozilla.org/es/docs/Web/HTML)
 * [MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 * [MDN Web Docs - JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+
+---
