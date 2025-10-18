@@ -20,12 +20,13 @@ Este proyecto tiene como objetivo crear una **página web de tienda básica** ut
 ---
 ## Instalaciones necesarias
 
-* [Visual studio code](https://developer.mozilla.org/es/docs/Web/HTML)
-* Instalar live preview - extension de microsoft
+* [Visual studio code](https://code.visualstudio.com/)
+* Instalar live preview - extension de microsoft (se realiza dentro de vscode)
 
 ## Links para practicar  
-* [codepen.io](https://codepen.io/tunk/pen/nrXmNJ)
-* [playcode.io](https://playcode.io/2589637)
+* <a href="https://codepen.io/tunk/pen/nrXmNJ" target="_blank">CodePen.io</a>
+* <a href="https://playcode.io/2589637" target="_blank">PlayCode.io</a>
+
 ---
 
 
