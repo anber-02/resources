@@ -24,8 +24,8 @@ Este proyecto tiene como objetivo crear una **página web de tienda básica** ut
 * Instalar live preview - extension de microsoft
 
 ## Links para practicar  
-[codepen.io](https://codepen.io/tunk/pen/nrXmNJ)
-[playcode.io](https://playcode.io/2589637)
+* [codepen.io](https://codepen.io/tunk/pen/nrXmNJ)
+* [playcode.io](https://playcode.io/2589637)
 ---
 
 
