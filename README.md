@@ -5,15 +5,17 @@ Este proyecto tiene como objetivo crear una **página web de tienda básica** ut
 
 ---
 
-## 🎨 Diseño del Proyecto
+##  Diseño del Proyecto
 
-👉 [Ver diseño en Stitch](https://stitch.withgoogle.com/projects/17531138555422829000)
+ [Ver diseño en Stitch](https://stitch.withgoogle.com/projects/17531138555422829000)
+
+![alt text](image.png)
 
 Utiliza este enlace como guía visual para replicar el diseño del proyecto.
 
 ---
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 La estructura de carpetas será la siguiente:
 
