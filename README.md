@@ -1,7 +1,33 @@
 
+
+
 # Proyecto Tienda
 
 Este proyecto tiene como objetivo crear una **página web de tienda básica** utilizando **HTML, CSS y JavaScript**, tomando como referencia un diseño visual alojado en Stitch de Google.
+
+---
+
+
+## Tabla de Contenidos
+
+1. [Instalaciones necesarias](#instalaciones)
+2. [Descripción del Proyecto](#descripción-del-proyecto)
+3. [Diseño del Proyecto](#diseño-del-Proyecto)
+4. [Estructura](#estructura-del-Proyecto)
+5. [Recursos](#recursos)
+---
+
+---
+## Instalaciones necesarias
+
+* [Visual studio code](https://developer.mozilla.org/es/docs/Web/HTML)
+* Instalar live preview - extension de microsoft
+
+## Links para practicar  
+[codepen.io](https://codepen.io/tunk/pen/nrXmNJ)
+[playcode.io](https://playcode.io/2589637)
+---
+
 
 ---
 
