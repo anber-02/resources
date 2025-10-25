@@ -36,6 +36,8 @@ form input {
 
 section img {
   width: 150px;
+
+  border-radius: 10px;
 }
 
 section div h1 {
@@ -53,20 +55,60 @@ section div h1 {
   scrollbar-width: 2px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 8px;
+  padding: 10px;
+  /* justify-content: space-around; */
+  gap: 16px;
+  color: green;
 }
 
 .productos > div h1 {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
+  color: red;
 }
+
+.productos > div:hover {
+  transform: scale(1.1);
+}
+
 .productos img {
   width: 150px;
 }
 
-#ofertas .productos img {
+#ofertas img {
   width: 200px;
+}
+
+#ofertas {
+  margin-top: 20px;
+}
+
+#categorias .productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+  background-color: yellow;
+}
+
+#categorias .productos > div {
+  background-color: rgb(233, 233, 233);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+}
+
+#categorias img {
+  width: 40px;
 }
 
 /* 
