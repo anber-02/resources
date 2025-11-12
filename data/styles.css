@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui;
+}
+
+.carrusel {
+  width: 100%;
+  background-color: red;
+  overflow: auto;
+}
+
+.carrusel-item {
+  width: 100%;
+  height: 300px;
+}
+
+.carrusel-item-img {
+  width: 320px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.description {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description p {
+  color: #505050;
+}
+
+#colores,
+#size,
+.reviews,
+form {
+  padding: 10px 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.colores {
+  display: flex;
+  gap: 16px;
+  justify-items: start;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: antiquewhite;
+  border: 1px solid #000000;
+}
+
+.circle:nth-child(1) {
+  background-color: aquamarine;
+}
+.circle:nth-child(3) {
+  background-color: rgb(103, 248, 110);
+}
+
+.circle:hover {
+  transform: scale(1.2);
+}
+
+.size {
+  display: flex;
+  gap: 16px;
+  justify-items: start;
+}
+
+.size div {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+.size div:hover {
+  background-color: rgb(73, 188, 255);
+  color: white;
+}
+
+.btn {
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 0px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+button {
+  background-color: rgba(11, 162, 238, 0.915);
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 0px;
+  box-shadow: 0px 2px 5px rgba(130, 204, 241, 0.915);
+}
+button:hover {
+  background-color: rgba(13, 140, 204, 0.915);
+}
+
+.rating {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px 20px 0px;
+}
+.rating > p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.rating > div {
+  display: flex;
+  gap: 8px;
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status div {
+  width: 100%;
+  height: 5px;
+  border-radius: 20px;
+  background-color: rgb(167, 167, 167);
+}
+
+.status div span {
+  display: block;
+  height: 5px;
+  border-radius: 20px;
+  background-color: rgb(255, 174, 0);
+}
+
+.uno {
+  width: 100%;
+}
+
+.dos {
+  width: 80%;
+}
+
+.tres {
+  width: 50%;
+}
+
+.comment-item header {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-item figure {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.comment-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.comment-item-title {
+  font-size: 16px;
+  color: #292929;
+}
+.comment-item-date {
+  font-size: 12px;
+  color: #505050;
+}
+
+.star {
+  color: rgb(255, 174, 0);
+  font-size: 18px;
+}
+
+.comment-item-text {
+  font-size: 14px;
+  color: #505050;
+}
+.reviews {
+  border-top: 1px solid #dddddd;
+  margin-top: 20px;
+}
+
+.comment-input {
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+form input {
+  width: 80px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgb(33, 203, 255);
+  color: white;
+  border: 0px;
+  align-self: flex-end;
+}

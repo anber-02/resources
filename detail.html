@@ -3,7 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Stitch Design</title>
+    <link rel="stylesheet" href="detail.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="hero">
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <main class="container">
+      <h1 class="title">Modern Lounge Chair</h1>
+      <p class="price">$299.99</p>
+      <p class="description">
+        Detailed product description with features and benefits. This chair is a
+        must-have for any modern living space.
+      </p>
+
+      <div class="options">
+        <h3>Color</h3>
+        <div class="color-options">
+          <div class="color black selected"></div>
+          <div class="color white"></div>
+          <div class="color brown"></div>
+        </div>
+
+        <h3>Size</h3>
+        <div class="size-options">
+          <button class="size">S</button>
+          <button class="size selected">M</button>
+          <button class="size">L</button>
+        </div>
+      </div>
+
+      <button class="add-btn">Add to Cart</button>
+
+      <section class="reviews">
+        <h3>Reviews (120)</h3>
+        <div class="rating-summary">
+          <div class="rating-score">4.5</div>
+          <div class="stars">★★★★☆</div>
+        </div>
+
+        <div class="review-item">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh6iVJ-JwRILLnvVszaj_NxIbm5KPgcauaX5cAS5vZDS6jbGwDnEyGo2BKyPbg_cV89FEaHTorbHMd0yoyBBh8uP_txdNCWsdFbe4-KRsiMjmhuXVRul4tZxsxcnd_4JICccfIsmxc8V2xUU5fEZzdJERFvR1GqwKEirOYxeKwSheCaAZsgcGBieBko6tUCb5WxHU7m5pnz8qbl32ScYHyweTneSU5Xy3s0fGyzwyO5_CiGbx1fO30rQ7DQ_LhJt8LKoo4dtwdpv3H"
+            class="avatar"
+            alt="Reviewer"
+          />
+          <div>
+            <p class="name">Sophia Clark</p>
+            <p class="time">2 weeks ago</p>
+            <div class="stars">★★★★★</div>
+            <p class="comment">
+              I absolutely love this product! The quality is amazing and it fits
+              perfectly. Highly recommend!
+            </p>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTT3H3FWWls7AKKPL07UOsxH-nQDGAiHne6HBhny7HW_hHPsLhcAM8E2bDrTJAiTnhn7U7BellOWh6d1wBBLZcK4AnX0SSN60uR0gdfYsrsWX10vCsDaTQBKcxeGT8HkFmyQE1Dl_SsyqRyzab_5pRGiYFC2YoZ0bgEtMaE_XhkkILYnA2D5dI7NyRxcXSHarAWoulwnw-H1ggyacNgwsGrtBuv9HbI28c-sxhNrwXWpsxzkFDwJFLyCPQBCkQZfQKWzDKQuvytXRw"
+            class="avatar"
+            alt="Reviewer"
+          />
+          <div>
+            <p class="name">Ethan Carter</p>
+            <p class="time">1 month ago</p>
+            <div class="stars">★★★★☆</div>
+            <p class="comment">
+              Great product, but the color was slightly different than expected.
+              Overall, very satisfied.
+            </p>
+          </div>
+        </div>
+
+        <!-- Formulario de comentario -->
+        <form class="comment-form">
+          <textarea class="comment-input" placeholder="Comentario"></textarea>
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      const form = document.querySelector(".comment-form");
+      const commentInput = document.querySelector(".comment-input");
+      const reviewsSection = document.querySelector(".reviews");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const comment = commentInput.value.trim();
+        if (!comment) return alert("Por favor, escribe un comentario.");
+
+        const review = document.createElement("div");
+        review.classList.add("review-item");
+        review.innerHTML = `
+      <img src="https://i.pravatar.cc/50" class="avatar" alt="Avatar">
+      <div>
+        <p class="name">Tú</p>
+        <p class="time">Justo ahora</p>
+        <div class="stars">★★★★★</div>
+        <p class="comment">${comment}</p>
+      </div>
+    `;
+
+        // Insertar el nuevo comentario antes del formulario
+        form.insertAdjacentElement("beforebegin", review);
+
+        // Limpiar campo de texto
+        commentInput.value = "";
+      });
+
+      // const form = document.getElementById("myForm");
+
+      // form.addEventListener("submit", function(e) {
+      //   e.preventDefault();
+      //   const formData = new FormData(form);
+      //   const comment = formData.get("comment");
+      //   const username = formData.get("username");
+      //   console.log("Usuario:", username, "Comentario:", comment);
+      // });
+
+      // const input = document.getElementById("commentInput");
+
+      // input.addEventListener("input", function() {
+      //   console.log("Texto actual:", input.value);
+      // });
+
+      //       <form id="myForm">
+      //   <input type="text" name="comment" />
+      //   <button type="submit">Enviar</button>
+      // </form>
+
+      document.getElementById("myForm").onsubmit = function (e) {
+        e.preventDefault();
+        const value = this.comment.value; // "comment" es el name del input
+        console.log("Comentario:", value);
+      };
+
+      //       <form onsubmit="handleSubmit(event)">
+      //   <input type="text" id="commentInput" />
+      //   <button type="submit">Enviar</button>
+      // </form>
+
+      // <script>
+      // function handleSubmit(e) {
+      //   e.preventDefault();
+      //   const value = document.getElementById("commentInput").value;
+      //   console.log("Comentario:", value);
+      // }
+    </script>
+  </body>
 </html>
