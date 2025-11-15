@@ -147,15 +147,18 @@
 
       // // [btn, btn]       btn
       btnColores.forEach((btn) => {
-        btn.addEventListener("mouseover", function (event) {
-          document.body.style.backgroundColor = btn.dataset.color;
-          document.body.style.backgroundColor = btn.dataset.color;
+        btn.addEventListener("click", function (event) {
+          // document.body.style.backgroundColor = btn.dataset.color;
+          // document.body.style.backgroundColor = btn.dataset.color;
           // 'circle verde' => ["circle", "verde"]
 
           // alert("Se Agrego correctamente");
 
-          // const clase = btn.classList.value.split(" ")[1];
-          // document.body.classList.contains(clase)
+          // CON ESO ELIMINAMOS TODAS LAS CLASES
+          document.body.classList = "";
+
+          const clase = btn.classList.value.split(" ")[1];
+          document.body.classList.add(clase);
           // // console.log(clase);
           // if (document.body.classList.contains(clase)) {
           //   document.body.classList.remove(clase);
