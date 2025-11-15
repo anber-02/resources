@@ -1,34 +1,43 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  width: 100%;
-  height: 100%;
   font-family: system-ui;
 }
 
 .carrusel {
-  width: 100%;
-  background-color: red;
-  overflow: auto;
+  display: flex;
+  overflow-x: auto;
+  /* El carrusel se detiene justo en cada imagen automáticamente. */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 20px 0;
+
+  scrollbar-width: none;
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
 }
 
 .carrusel-item {
-  width: 100%;
+  flex: 0 0 auto;
+  width: 85%;
+  max-width: 350px;
   height: 300px;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
-.carrusel-item-img {
-  width: 320px;
+.carrusel-item img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.carrusel {
-  display: flex;
-  flex-wrap: nowrap;
 }
 
 .description {
@@ -69,7 +78,7 @@ form {
   background-color: aquamarine;
 }
 .circle:nth-child(3) {
-  background-color: rgb(103, 248, 110);
+  background-color: #67f86e;
 }
 
 .circle:hover {
@@ -227,4 +236,61 @@ form input {
   color: white;
   border: 0px;
   align-self: flex-end;
+}
+nav {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+      outline: none;
+    }
+  }
+}
+
+/* Selecciona el primer elemento */
+ul li:nth-child(1) {
+  color: red;
+}
+
+/* Selecciona el tercer elemento */
+ul li:nth-child(3) {
+  color: blue;
+}
+
+/* Selecciona solo los pares */
+ul li:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Selecciona solo los impares */
+ul li:nth-child(odd) {
+  background: #ddd;
+}
+
+/* Fórmula: cada 3 elementos */
+ul li:nth-child(3n) {
+  font-weight: bold;
+}
+/* 2, 5, 8 selecciona de 3 en 3 empezando por el 2 */
+div:nth-child(3n + 2) {
+  color: blue;
+}
+
+.rojo {
+  background-color: red !important;
+}
+.verde {
+  background-color: green !important;
+}
+.azul {
+  background-color: blue !important;
 }

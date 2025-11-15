@@ -239,3 +239,16 @@ body {
 .submit-btn:hover {
   opacity: 0.9;
 }
+
+.brown1 {
+  background: #a37357;
+}
+
+/* Esto indica que si un elemento tiene estas dos clases tanto button como is_applied entonces se aplican los estilos */
+.button {
+  background: #a37357;
+  &.is_applied {
+    background-color: red;
+    pointer-events: none;
+  }
+}

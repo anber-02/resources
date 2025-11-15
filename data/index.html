@@ -45,9 +45,9 @@
       <section id="colores">
         <h3>COLOR</h3>
         <div class="colores">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
+          <div class="circle verde" data-color="aquamarine"></div>
+          <div class="circle azul" data-color="antiquewhite"></div>
+          <div class="circle rojo" data-color="#67f86e"></div>
         </div>
       </section>
 
@@ -124,9 +124,63 @@
       </section>
 
       <form action="">
-        <textarea class="comment-input" placeholder="Comentario"></textarea>
+        <textarea
+          name="comment"
+          class="comment-input"
+          placeholder="Comentario"
+        ></textarea>
         <input type="submit" value="Enviar" />
       </form>
     </main>
+    <script type="module">
+      // const btnColores = document.querySelector(".circle");
+
+      // btn
+
+      const btnColores = document.querySelectorAll(".circle");
+
+      // btnColores.addEventListener("mouseenter", (e) => {
+      //   console.log("Hola");
+      // });
+
+      // [btn, btn, btn]
+
+      // // [btn, btn]       btn
+      btnColores.forEach((btn) => {
+        btn.addEventListener("mouseover", function (event) {
+          document.body.style.backgroundColor = btn.dataset.color;
+          document.body.style.backgroundColor = btn.dataset.color;
+          // 'circle verde' => ["circle", "verde"]
+
+          // alert("Se Agrego correctamente");
+
+          // const clase = btn.classList.value.split(" ")[1];
+          // document.body.classList.contains(clase)
+          // // console.log(clase);
+          // if (document.body.classList.contains(clase)) {
+          //   document.body.classList.remove(clase);
+          // } else {
+          //   document.body.classList.add(clase);
+          // }
+        });
+      });
+
+      // btnColores[1].addEventListener("click", function (event) {
+      //   console.log("Hubo un click");
+
+      //   // background-color
+      //   document.body.style.backgroundColor = btnColores[1].dataset.color;
+      //   // console.log(btnColores.dataset.color);
+      // });
+
+      // const btnColors = document.querySelectorAll(".circle");
+      // btnColors.forEach((btn) => {
+      //   btn.addEventListener("click", function (event) {
+      //     console.log(btn.dataset.color);
+      //     // btn.getAttribute("data-color");
+      //     document.body.style.backgroundColor = btn.dataset.color;
+      //   });
+      // });
+    </script>
   </body>
 </html>

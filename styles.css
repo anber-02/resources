@@ -51,14 +51,15 @@ section div h1 {
 }
 
 .productos {
-  overflow-x: auto;
-  scrollbar-width: 2px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   padding: 10px;
-  /* justify-content: space-around; */
-  gap: 16px;
-  color: green;
+  gap: 20px;
+}
+
+/* Si el número de ítems es impar → el último ocupa las 2 columnas */
+.productos > :last-child:nth-child(odd) {
+  grid-column: span 2;
 }
 
 .productos > div h1 {
@@ -68,7 +69,17 @@ section div h1 {
 }
 
 .productos > div:hover {
-  transform: scale(1.1);
+  animation: scale 0.3s ease-in-out forwards;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.03);
+  }
 }
 
 .productos img {
@@ -87,12 +98,6 @@ section div h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-}
-
-.div3 {
-  grid-column: span 2 / span 2;
-  grid-row-start: 3;
-  background-color: yellow;
 }
 
 #categorias .productos > div {

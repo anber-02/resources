@@ -92,32 +92,73 @@
     </main>
 
     <script type="text/javascript">
+      const colores = document.querySelectorAll(".color");
+
+      colores.forEach((color) => {
+        color.addEventListener("click", (e) => {
+          const newColor = window.getComputedStyle(color).backgroundColor;
+          document.querySelector(".container").style.backgroundColor = newColor;
+          // document.querySelector(".container").classList.add(colorClass2);
+        });
+      });
+
+      let user = {
+        avatar: "https://i.pravatar.cc/50",
+        name: "Luis Mendoza",
+        age: 24,
+        comentario: "algun texto",
+      };
+
+      // document.getElementById("colores");
+      // // document.getElementsByClassName();
+      // document.querySelector("div");
+      // document.querySelectorAll(".dots");
+
+      // let mensaje = [{}]
+
       const form = document.querySelector(".comment-form");
       const commentInput = document.querySelector(".comment-input");
       const reviewsSection = document.querySelector(".reviews");
 
-      form.addEventListener("submit", (e) => {
+      function enviarFormulario(e) {
         e.preventDefault();
-        const comment = commentInput.value.trim();
-        if (!comment) return alert("Por favor, escribe un comentario.");
+        const comment = commentInput.value; // Hola comentario
 
-        const review = document.createElement("div");
-        review.classList.add("review-item");
+        const review = document.createElement("div"); // <div> </div>
+
+        review.classList.add("review-item"); // <div class="review-item" > </div>
+        review.classList.add("test");
+        /**
+         *  <div class="review-item"> 
+         *    <img src="https://i.pravatar.cc/50" class="avatar" alt="Avatar">
+         *      <div>
+                  <p class="name">Tú</p>
+                  <p class="time">Justo ahora</p>
+                  <div class="stars">★★★★★</div>
+                  <p class="comment">${comment}</p>
+                </div>
+         * </div>
+         * 
+        */
         review.innerHTML = `
-      <img src="https://i.pravatar.cc/50" class="avatar" alt="Avatar">
-      <div>
-        <p class="name">Tú</p>
-        <p class="time">Justo ahora</p>
-        <div class="stars">★★★★★</div>
-        <p class="comment">${comment}</p>
-      </div>
-    `;
+        <img src="https://i.pravatar.cc/50" class="avatar" alt="Avatar">
+        <div>
+          <p class="name">Tú</p>
+          <p class="time">Justo ahora</p>
+          <div class="stars">★★★★★</div>
+          <p class="comment">${comment}</p>
+        </div>
+      `;
 
         // Insertar el nuevo comentario antes del formulario
         form.insertAdjacentElement("beforebegin", review);
 
         // Limpiar campo de texto
         commentInput.value = "";
+      }
+
+      form.addEventListener("submit", (e) => {
+        enviarFormulario(e);
       });
 
       // const form = document.getElementById("myForm");
@@ -141,11 +182,11 @@
       //   <button type="submit">Enviar</button>
       // </form>
 
-      document.getElementById("myForm").onsubmit = function (e) {
-        e.preventDefault();
-        const value = this.comment.value; // "comment" es el name del input
-        console.log("Comentario:", value);
-      };
+      // document.getElementById("myForm").onsubmit = function (e) {
+      //   e.preventDefault();
+      //   const value = this.comment.value; // "comment" es el name del input
+      //   console.log("Comentario:", value);
+      // };
 
       //       <form onsubmit="handleSubmit(event)">
       //   <input type="text" id="commentInput" />
